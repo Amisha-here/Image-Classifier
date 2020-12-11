@@ -47,16 +47,16 @@ function gotImage(e){
 }
 
 function handleFiles() {
-    const curFiles=fileInput.files;
-    if(curFiles.length===0){
-        image.src='images/bird.jpg';
-        setTimeout(classifyImage,100);
-        warning.innerHTML='No image selected for upload';
-    }else{
-        image.src=window.URL.createObjectURL(curFiles[0]);
-        warning.innerHTML='';
-        setTimeout(classifyImage,100);
-    }
+  const curFiles = fileInput.files;
+  if (curFiles.length === 0) {
+    image.src = 'images/bird.jpg';
+    setTimeout(classifyImage, 100);
+    warning.innerHTML = 'No image selected for upload';
+  } else {
+    image.src = window.URL.createObjectURL(curFiles[0]);
+    warning.innerHTML = '';
+    setTimeout(classifyImage, 100);
+  }
 }
 
 function clickUploader(){
