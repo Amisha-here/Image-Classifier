@@ -25,7 +25,7 @@ dropContainer.addEventListener('drop',gotImage,false);
 function gotImage(e){
     const dt=e.dataTransfer;
     const files=dt.files;
-    if(fileInput.length>1){
+    if(files.length>1){
         console.error('upload only one file');
     }
     const file=files[0];
