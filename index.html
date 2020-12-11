@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Image Classification</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="ml5.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="container">
+            <img src="images/bird/jpg" id="image" class="center">
+            <div id="text-container">
+                <p id="instruction" class="green-color">
+                    <button id="uploader-btn" onClick="clickUploader()">Upload Image</button>
+                    <p class="green-color"> or drag and drop 📂</p>
+                    </p>
+                    <p id="warning" class="result-color"></p>
+                    <p class="result-color">
+                        The MobileNet model labeled this ⤴ as a
+                      <span id="result" class="green-color">...</span>
+                      <span id="probablity-container" class="result-color">
+                          with a confidence of
+                          <span id="probability" class="green-color">...</span>
+                      </span>  
+                    </p>
+                <input name="imgFile" type="file" id="fileUploader" accept="image/*" onChange="handleFiles()">
+
+            </div>
+        </div>
+        
+        <script src="main.js"></script>
+    </body>
+</html>
